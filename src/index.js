@@ -2,6 +2,7 @@ import './style.css';
 import { clearContent, selectButton } from './helpers';
 import generateHomePage from './home';
 import generateMenuPage from './menu';
+import generateContactPage from './contact';
 
 // Get Content Div
 const contentContainer = document.getElementById('content')
@@ -67,7 +68,7 @@ menuBtn.textContent = "Menu";
 menuBtn.classList.add('btn');
 
 const aboutUsBtn = document.createElement('li');
-aboutUsBtn.textContent = "About Us";
+aboutUsBtn.textContent = "Contact";
 aboutUsBtn.classList.add('btn');
 
 
@@ -83,7 +84,8 @@ menuBtn.addEventListener('click', () => {
 });
 
 aboutUsBtn.addEventListener('click', () => {
-    console.log("hi");
+    clearContent(Container);
+    generateContactPage(Container);
 });
 
 btnsContainer.appendChild(homeBtn);
@@ -110,7 +112,7 @@ buttonsArray.forEach(button => {
 // Create Footer
 const footerContainer = document.createElement('div');
 const footer = document.createElement('p');
-footer.textContent = "this is the footer. lorem ipsum this is made by me."
+footer.textContent = "www.burgeriadummyrestaurant.com \u00A9 2023"
 
 // Append Footer to navContainer
 footerContainer.appendChild(footer);
